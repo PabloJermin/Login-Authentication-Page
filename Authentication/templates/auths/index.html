@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <script src="https://kit.fontawesome.com/5af2f4c051.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css fonts/all.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    {%for message in messages%}
+    <div class= "alert  alert -{{message.tags }} alert-dismissible fadr show" role = "alert">
+        <strong>Message:</strong> {{message}}
+    <button type="button" class= "close" data-dismiss="alert"></button>
+    <h1>Welcome to my Page</h1>
+    {%if user.is_authenticated%}
+    <h3> Hello,{{fname}}<h3/>
+    <h4> You've succesfully logged in</h4>
+
+    <button type="submit"> <a href="/signup"> SignUp</a></button>
+    <button type="submit"><a href="/signIn"> SignIn</a></button>
+    <button type="submit"><a href="/signOut"> SignOut</a></button>
+
+</body>
