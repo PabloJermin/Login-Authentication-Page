@@ -1,0 +1,29 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <script src="https://kit.fontawesome.com/5af2f4c051.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css fonts/all.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <form action="/signin" method= "post">
+        {% csrf_token %}
+        <label for=""> Username </label>
+        <input type= "text" id= "username" name="username" placeholder="Enter you username" required>
+        <br>
+        <br>
+
+        <label for=""> Password </label>
+        <input type= "password" id= "pass1" name="pass1" placeholder="Enter your Password" required>
+        <br>
+
+        <button type="submit"> Sign In</button>
+
+    </form>
+
+</body>
