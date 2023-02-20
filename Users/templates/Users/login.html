@@ -11,10 +11,13 @@
     
 </head>
 <body>
-    <form action="/signin" method="POST">
+    
+    
+    <form action="/login" method="POST">
         {% csrf_token %}
         <label for="username"> Username </label>
         <input type= "text" id= "username" name="username" placeholder="Enter you username" required>
+        {{form|cripsy}}
         <br>
         <br>
 

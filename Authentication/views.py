@@ -53,7 +53,7 @@ def signup(request):
         # WELCOMING EMAIL MESSAGE
         
         subject = "Welcome to this page"
-        meessage = "hello " + myuser.f_name + "!," + "welcome to this website, \n\n please click on the link to"
+        meessage = "hello " + myuser.f_name + "!," + "welcome to this website, \n\n Please click on the link to"
         "confirm your account"
         
         from_email = settings.EMAIL_HOST_USER
@@ -76,17 +76,17 @@ def signin(request):
         if user is not None:
             login(request, user)
             fname = user.username
-            return render(request, "auths/index.html", {'fname': fname})
+            return render(request, "authentication/index.html", {'fname': fname})
         
         else:
             messages.error(request, "You entered a wrong email or password")
             return redirect('signin')
     
-    return render(request, "auths/signin.html")
+    return render(request, "authentication/signin.html")
 
 
 
 def signout(request):
     logout(request)
     messages.success(request, "Logged out sucessfully")
-    return render (resquest, 'auths/index/html')
+    return render (resquest, 'authentication/index/html')
